@@ -14,6 +14,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html"><img id="logo" src="logo.png.png" alt="Logo Rewind"></a>
+
     <div class="search-wrap" role="search">
       <select id="search-scope">
         <option value="all">Todos</option>
@@ -24,6 +25,7 @@
       <input id="searchInput" type="search" placeholder="Pesquise seu disco favorito..." />
       <button id="searchBtn"><i class="fa fa-search"></i></button>
     </div>
+
     <div class="header-icons">
       <a href="login.html" class="icon-btn"><i class="fa fa-user"></i></a>
       <a href="favoritos.html" class="icon-btn"><i class="fa fa-heart"></i></a>
@@ -40,100 +42,108 @@
         <button id="genreToggle" aria-expanded="false">Gênero <i class="fa fa-angle-down"></i></button>
         <div id="genreMenu" class="dropdown-panel" aria-hidden="true">
           <ul>
+
+            <li><button class="genre-item">Metal</button></li>
             <li><button class="genre-item">Rock</button></li>
             <li><button class="genre-item">MPB</button></li>
-            <li><button class="genre-item">Clássica</button></li>
+            <li><button class="genre-item">R&b</button></li>
+            <li><button class="genre-item">Samba</button></li>
             <li><button class="genre-item">Pop</button></li>
             <li><button class="genre-item">Kpop</button></li>
+            <li><button class="genre-item">J-pop</button></li>
+
+          
           </ul>
         </div>
       </li>
       <li class="nav-item"><a href="discos.html">DISCOS</a></li>
       <li class="nav-item"><a href="cds.html">CDS</a></li>
       <li class="nav-item"><a href="dvds.html">DVDS</a></li>
-      <li class="nav-item"><a href="promocoes.html">PROMOÇÕES</a></li>
       <li class="nav-item"><a href="quem-somos.html">QUEM SOMOS</a></li>
       <li class="nav-item"><a href="contato.html">CONTATO</a></li>
     </ul>
   </nav>
 </header>
 
-<div class="container main-area">
-  <aside class="sidebar">
-    <div class="side-box">
-      <h4>Categorias de Produto</h4>
-      <ul class="side-list">
-        <li><a href="discos.html">Discos de Vinil</a></li>
-        <li><a href="cds.html">CDs</a></li>
-        <li><a href="dvds.html">DVDs</a></li>
-      </ul>
+<main class="content">
+
+  <!-- PROMOÇÕES DA SEMANA -->
+  <section class="promotions">
+    <div class="promo-head">
+      <h2>Promoções da Semana</h2>
+      <p class="promo-lead">Garanta agora edições exclusivas e clássicos em vinil — preços imperdíveis para colecionadores e amantes da boa música. Estoque limitado, promoção válida apenas por essa semana!</p>
     </div>
-  </aside>
 
-  <main class="content">
-    <section class="promotions">
-      <div class="promo-head">
-        <h2>Promoções da Semana</h2>
-        <p class="promo-lead">Aproveite seleções especiais desta semana — clássicos, relançamentos e edições em ótimo preço. Estoque limitado. Compras e pagamentos via WhatsApp.</p>
-      </div>
+    <div class="promo-grid" id="productGrid">
+      <article class="product-card" data-type="vinil" data-title="Enhypen - Romance Untold (Vinil)">
+        <figure><img src="enhypen (2).jpeg" alt="Enhypen - Romance Untold(Vinil)"></figure>
+        <h3>Enhypen — Romance Untold (Vinil)</h3>
+        <div class="price">R$ 265,90</div>
+        <div class="actions">
+          <button class="btn-add">Adicionar ao carrinho</button>
+          <button class="btn-fav"><i class="fa fa-heart"></i></button>
+        </div>
+      </article>
 
-      <div class="promo-grid" id="productGrid">
-        <article class="product-card" data-type="vinil" data-title="Enhypen - Romance Untold (Vinil)">
-          <figure><img src="enhypen (2).jpeg" alt="Enhypen - Romance Untold(Vinil)"></figure>
-          <h3>Enhypen — Romance Untold (Vinil)</h3>
-          <div class="price">R$ 265,90</div>
-          <div class="actions">
-            <button class="btn-add">Adicionar ao carrinho</button>
-            <button class="btn-fav"><i class="fa fa-heart"></i></button>
-          </div>
-        </article>
+      <article class="product-card" data-type="vinil" data-title="Frank Ocean - Blonde (Vinil)">
+        <figure><img src="frankocean.png" alt="Frank Ocean - Channel Orange"></figure>
+        <h3>Frank Ocean — Channel Orange (Vinil)</h3>
+        <div class="price">R$ 229,90</div>
+        <div class="actions">
+          <button class="btn-add">Adicionar ao carrinho</button>
+          <button class="btn-fav"><i class="fa fa-heart"></i></button>
+        </div>
+      </article>
 
-        <article class="product-card" data-type="vinil" data-title="Frank Ocean - Blonde (Vinil)">
-          <figure><img src="frankocean.png" alt="Frank Ocean - Channel Orange"></figure>
-          <h3>Frank Ocean - Channel Orange (Vinil) </h3>
-          <div class="price">R$ 229,90</div>
-          <div class="actions">
-            <button class="btn-add">Adicionar ao carrinho</button>
-            <button class="btn-fav"><i class="fa fa-heart"></i></button>
-          </div>
-        </article>
+      <article class="product-card" data-type="vinil" data-title="Sade - Love Deluxe(Vinil)">
+        <figure><img src="sade.png" alt="Sade - Love Deluxe(Vinil)"></figure>
+        <h3>Sade — Love Deluxe (Vinil)</h3>
+        <div class="price">R$ 209,90</div>
+        <div class="actions">
+          <button class="btn-add">Adicionar ao carrinho</button>
+          <button class="btn-fav"><i class="fa fa-heart"></i></button>
+        </div>
+      </article>
+    </div>
+  </section>
 
-        <article class="product-card" data-type="vinil" data-title="Sade - Love Deluxe(Vinil)">
-          <figure><img src="sade.png" alt="Sade - Love Deluxe(Vinil)"></figure>
-          <h3>Sade - Love Deluxe (Vinil)</h3>
-          <div class="price">R$ 209,90</div>
-          <div class="actions">
-            <button class="btn-add">Adicionar ao carrinho</button>
-            <button class="btn-fav"><i class="fa fa-heart"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
+  <!-- CATEGORIAS -->
+  <section class="categories">
+    <h2>Categorias</h2>
+     <p>Explore nossa seleção de mídias cuidadosamente escolhidas — discos de vinil, CDs e DVDs para colecionadores e fãs de som autêntico.</p>
+    <div class="category-grid">
+      <a href="discos.html" class="category-card">🎵 Discos de Vinil</a>
+      <a href="cds.html" class="category-card">💿 CDs</a>
+      <a href="dvds.html" class="category-card">📀 DVDs</a>
+    </div>
+  </section>
 
-    <section class="why">
-      <h3>Por que comprar na Rewind?</h3>
-      <p>Somos especializados em discos físicos: vinis, CDs e DVDs. Curadoria, embalagem segura e atendimento via WhatsApp.</p>
-    </section>
-  </main>
-</div>
+  <!-- POR QUE COMPRAR -->
+  <section class="why">
+    <h3>Por que comprar na Rewind?</h3>
+    <p>Somos apaixonados por música. A Rewind é um espaço para quem valoriza o som físico — cada vinil, CD ou DVD é tratado com curadoria, cuidado e alma. Atendimento rápido e personalizado via WhatsApp.</p>
+  </section>
+
+</main>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="logo-footer-wrap"><img src="Rewind.png" alt="Logo Rewind footer"></div>
+      <div class="logo-footer-wrap"><img src="logo.png.png" alt="Logo Rewind footer"></div>
     </div>
+
     <div class="footer-links">
       <h4>Menu</h4>
       <ul>
         <li><a href="quem-somos.html">Quem Somos</a></li>
-        <li><a href="promocoes.html">Promoções</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a href="como-comprar.html">Como Comprar</a></li>
+        <li><a href="comocomprar.html">Como Comprar</a></li>
       </ul>
     </div>
+
     <div class="footer-info">
       <h4>Informações</h4>
-      <p>Vendas via WhatsApp. Atendimento: seg-sex 8h–17h.</p>
+      <p>Vendas via WhatsApp. Atendimento: seg–sex, 8h–17h.</p>
       <p>Email: <a href="mailto:contato@rewind.com.br">contato@rewind.com.br</a></p>
     </div>
   </div>

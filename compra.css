@@ -12,10 +12,11 @@
   --toast-color:#072018;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter, "Arial", sans-serif;background:#fff;color:var(--verde-2);}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;background:#fff;color:var(--verde-2);line-height:1.6}
 
-/* HEADER */
+/* CABEÇALHO*/
 .site-header{border-bottom:1px solid var(--soft);background:#fff;z-index:1000;position:sticky;top:0}
 .header-inner{max-width:1200px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;gap:20px;justify-content:space-between}
 .brand img#logo{height:100px;width:auto;display:block}
@@ -28,6 +29,7 @@ body{font-family:Inter, "Arial", sans-serif;background:#fff;color:var(--verde-2)
 .icon-btn:hover{color:var(--verde-1);background:rgba(0,0,0,0.02)}
 .cart #cartCount{position:absolute;top:-6px;right:-6px;background:#e74c3c;color:white;padding:3px 7px;border-radius:12px;font-size:12px}
 
+
 /* NAVIGATION */
 .main-nav{background:var(--accent);position:sticky;top:140px;z-index:999;box-shadow:0 2px 4px rgba(0,0,0,0.08)}
 .main-nav ul{max-width:1200px;margin:0 auto;display:flex;gap:18px;padding:12px 20px;align-items:center;list-style:none;flex-wrap:wrap}
@@ -38,47 +40,33 @@ body{font-family:Inter, "Arial", sans-serif;background:#fff;color:var(--verde-2)
 .dropdown-panel ul{list-style:none}
 .dropdown-panel button:hover { color: var(--verde-1); }
 
-/* RODAPÉ */
+/* CONTEÚDO */
+.pagina-info{max-width:900px;margin:40px auto;padding:20px;text-align:center}
+.pagina-info h1{color:var(--verde-2);margin-bottom:20px;font-size:32px}
+.pagina-info ol{text-align:left;margin:20px auto;max-width:600px}
+.pagina-info li{margin-bottom:10px;color:var(--verde-2)}
+
+.cta-whatsapp{margin-top:30px}
+.cta-whatsapp a{display:inline-block;padding:12px 20px;background:#25D366;color:white;font-weight:700;border-radius:8px;text-decoration:none;font-size:18px;transition:.3s}
+.cta-whatsapp a:hover{background:#1ebe5b;transform:scale(1.05)}
+.cta-whatsapp i{margin-right:8px}
+
+/* RODAPÉ*/
 .site-footer{background:var(--accent);color:var(--off);padding:36px 20px;margin-top:60px}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;gap:20px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
 .logo-footer-wrap img{height:90px;width:90px;border-radius:50%;border:3px solid var(--verde-1);background:#fff;padding:4px;object-fit:cover}
 .footer-links, .footer-info{min-width:160px}
 .footer-links h4,.footer-info h4{color:var(--verde-1);margin-bottom:10px}
 .footer-links ul{list-style:none}
-.footer-links a{color:var(--off);display:block;margin-bottom:8px;text-decoration:none;transition:.3s}
+.footer-links a{color:var(--off);display:block;margin-bottom:8px;text-decoration:none}
+.footer-bottom{text-align:center;margin-top:14px;border-top:1px solid rgba(255,255,255,0.06);padding-top:12px;font-size:18px}
 .footer-links a:hover{color:var(--verde-claro);margin-left:5px}
+.footer-links a{color:var(--off);display:block;margin-bottom:8px;text-decoration:none;transition:.3s}
 .footer-info a{color:var(--verde-claro);text-decoration:none}
 .footer-info a:hover{text-decoration:underline}
-.footer-bottom{text-align:center;margin-top:14px;border-top:1px solid rgba(255,255,255,0.06);padding-top:12px;font-size:18px}
 
-/*  Comprar  */
-.promotions{max-width:1200px;margin:60px auto;padding:0 20px;text-align:center}
-.promotions h2{font-size:28px;margin-bottom:10px}
-.promo-lead{color:var(--muted);margin-bottom:20px}
-.promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.product-card{background:var(--off);padding:12px;border-radius:12px;border:1px solid var(--soft);box-shadow:0 6px 18px rgba(0,0,0,0.04);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s, box-shadow 0.3s}
-.product-card:hover{transform:scale(1.03);box-shadow:0 12px 24px rgba(0,0,0,0.15)}
-.product-card figure{width:100%;aspect-ratio:1/1;margin-bottom:12px}
-.product-card img{width:100%;height:100%;object-fit:cover;border-radius:8px;transition:transform 0.3s}
-.product-card:hover img{transform:scale(1.05)}
-.product-card h3{font-size:15px;margin-bottom:8px}
-.product-card .price{font-weight:800;color:var(--verde-1);margin-bottom:10px}
-.product-card .actions{display:flex;gap:10px}
-.btn-add{background:var(--accent);color:var(--off);border:none;padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:700;transition:all 0.2s}
-.btn-add:hover{background:var(--verde-1);color:#072018}
-.btn-fav{background:transparent;border:1px solid var(--soft);padding:8px;border-radius:8px;cursor:pointer;color:var(--muted);transition:all 0.2s}
-.btn-fav:hover{color:var(--verde-1);border-color:var(--verde-1)}
-.btn-fav.active{color:crimson;border-color:crimson}
-.categories{max-width:1200px;margin:60px auto;padding:0 20px;text-align:center}
-.category-grid{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px}
-.category-card{background:var(--off);padding:20px 40px;border-radius:var(--radius);border:1px solid var(--soft);text-decoration:none;font-weight:700;color:var(--verde-2);transition:all 0.2s ease}
-.category-card:hover{background:#023b150d;color:#072018;transform:translateY(-2px)}
-.why{max-width:1200px;margin:60px auto;padding:0 20px;text-align:center}
-.why h3{font-size:22px;margin-bottom:10px}
-.why p{color:var(--muted);max-width:800px;margin:0 auto}
-
-/* TOAST */
-.rw-toast{position:fixed;right:18px;bottom:18px;background:var(--toast-bg);color:var(--toast-color);padding:12px 18px;border-radius:10px;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.2);opacity:0;font-weight:600;transition:opacity 0.5s, transform 0.3s;transform: translateY(20px);}
+/* ANIMAÇÕES */
+a,button{transition:all .3s ease}
 
 /* RESPONSIVO */
 @media (max-width:980px){
@@ -89,5 +77,6 @@ body{font-family:Inter, "Arial", sans-serif;background:#fff;color:var(--verde-2)
   .header-inner{flex-direction:column;gap:12px}
   .search-wrap{flex-direction:column;width:100%}
   .search-wrap input,.search-wrap select,.search-wrap button{width:100%}
-  .promo-grid{grid-template-columns:1fr}
 }
+
+

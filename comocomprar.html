@@ -4,29 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Como Comprar - Rewind</title>
-  <link rel="stylesheet" href="style.inicio.css">
+  <link rel="stylesheet" href="compra.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="logo.png.png">
 </head>
 <body>
-  <header class="header-simple">
-    <a href="index.html"><img src="img/logo.png" alt="Logo Rewind" class="logo"></a>
+
+  <!-- CABEÇALHO IGUAL AO DA PÁGINA INICIAL -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img id="logo" src="logo.png.png" alt="Logo Rewind">
+      </a>
+
+      <div class="search-wrap" role="search">
+        <select id="search-scope">
+          <option value="all">Todos</option>
+          <option value="vinil">Discos</option>
+          <option value="cd">CDs</option>
+          <option value="dvd">DVDs</option>
+        </select>
+        <input id="searchInput" type="search" placeholder="Pesquise seu disco favorito...">
+        <button id="searchBtn"><i class="fa fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="login.html" class="icon-btn"><i class="fa fa-user"></i></a>
+        <a href="favoritos.html" class="icon-btn"><i class="fa fa-heart"></i></a>
+        <a href="carrinho.html" class="icon-btn cart">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item nav-dropdown">
+          <button id="genreToggle" aria-expanded="false">Gênero <i class="fa fa-angle-down"></i></button>
+          <div id="genreMenu" class="dropdown-panel" aria-hidden="true">
+            <ul>
+              <li><button class="genre-item">Metal</button></li>
+            <li><button class="genre-item">Rock</button></li>
+            <li><button class="genre-item">MPB</button></li>
+            <li><button class="genre-item">R&b</button></li>
+            <li><button class="genre-item">Samba</button></li>
+            <li><button class="genre-item">Pop</button></li>
+            <li><button class="genre-item">Kpop</button></li>
+            <li><button class="genre-item">J-pop</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item"><a href="discos.html">DISCOS</a></li>
+        <li class="nav-item"><a href="cds.html">CDS</a></li>
+        <li class="nav-item"><a href="dvds.html">DVDS</a></li>
+        <li class="nav-item"><a href="quem-somos.html">QUEM SOMOS</a></li>
+        <li class="nav-item"><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPA-->
   <main class="pagina-info">
-    <h1>🛒 Como Comprar na Rewind</h1>
-    <p>Nosso processo é simples e prático:</p>
+    <h1>Como Comprar na Rewind</h1>
+    <p>Nosso processo é simples e rápido. Veja como garantir seus produtos:</p>
     <ol>
       <li>Escolha os produtos que deseja e adicione ao carrinho.</li>
       <li>Finalize sua lista de compras.</li>
-      <li>Entre em contato pelo <strong>WhatsApp</strong> para confirmar a compra.</li>
-      <li>O pagamento e a entrega são combinados diretamente pelo WhatsApp.</li>
+      <li>Entre em contato pelo WhatsApp para confirmar a compra.</li>
+      <li>Pagamento e entrega combinados diretamente pelo WhatsApp.</li>
     </ol>
-    <p class="whatsapp">📲 WhatsApp: <a href="https://wa.me/5541999999999" target="_blank">Clique aqui para falar conosco</a></p>
+    <div class="cta-whatsapp">
+      <a href="https://wa.me/5511976411769" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
+      </a>
+    </div>
   </main>
 
-  <footer>
+  <!-- RODAPÉ - Mantido igual -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer-wrap"><img src="logo.png.png" alt="Logo Rewind footer"></div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <h4>Informações</h4>
+        <p>Vendas via WhatsApp. Atendimento: seg–sex, 8h–17h.</p>
+        <p>Email: <a href="mailto:contato@rewind.com.br">contato@rewind.com.br</a></p>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Rewind - Todos os direitos reservados.</p>
+      <small>© 2025 Rewind. Todos os direitos reservados.</small>
     </div>
   </footer>
+
+  <script>
+    const genreToggle = document.getElementById('genreToggle');
+    const genreMenu = document.getElementById('genreMenu');
+    genreToggle.addEventListener('click', () => {
+      const expanded = genreToggle.getAttribute('aria-expanded') === 'true';
+      genreToggle.setAttribute('aria-expanded', !expanded);
+      genreMenu.style.display = expanded ? 'none' : 'block';
+      genreMenu.setAttribute('aria-hidden', expanded);
+    });
+  </script>
+
 </body>
 </html>
